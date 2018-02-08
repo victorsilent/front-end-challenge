@@ -1,0 +1,69 @@
+.itemContainer{
+    position: relative;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 4px 4px;
+    border: 1px solid #000;
+    min-height: 300px;
+    height: 300px;
+    flex: 0 0 calc(25% - 10px);
+    @media (max-width: 768px) {
+        flex: 0 0 calc(50% - 10px);  
+    }
+    text-align: center;
+    justify-content: center;
+}
+.itemInfo{
+    background-color: #dfe6e9;
+    align-self: flex-end;
+    width: 100%;
+}
+.itemTitle{
+    font-size: 1.5em;
+    margin: 0;
+    text-transform: lowercase;
+    &::first-letter{
+        text-transform: uppercase;
+    }
+}
+.itemPrice{
+    font-size: 1.3em;
+}
+.muted{
+    color: #636e72;
+}
+.discountPrice{
+    display: block;
+    font-size: 1.4em;
+}
+.wrapperHover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #fff;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 300ms ease;
+    &:hover{
+        opacity: 1;
+    }
+}
+.addToCard{
+    align-self: center;
+    color: #fff;
+    position: absolute;
+    align-self: center;
+    a{
+        text-decoration: none;
+        font-size: 1.4em;
+        margin-top: 10px;
+        display: block;
+        &:hover{
+            color: #6c5ce7;
+        }
+    }
+}

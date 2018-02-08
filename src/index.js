@@ -12,8 +12,8 @@ import { ConnectedRouter } from 'react-router-redux';
 import store from './store';
 
 //Components
-import App from './components/App';
-import About from './components/About';
+import App from './containers/App/';
+import Cart from './containers/Cart/';
 
 const history = createHistory();
 
@@ -22,7 +22,7 @@ const wrapper = (
         <ConnectedRouter history={history}>
             <div>
                 <Route exact path="/" component={App}/>
-                <Route path="/about/:name" component={About}/>
+                <Route exact path="/cart" component={Cart}/>
             </div>
         </ConnectedRouter>
     </Provider>
